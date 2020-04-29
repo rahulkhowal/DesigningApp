@@ -6,10 +6,10 @@ const Header = (props) => {
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={props.func}>
-                <Image style={styles.backImage} source={require('../assets/back.png')} />
+                <Image style={styles.backImage} source={require('../../../assets/back.png')} />
             </TouchableOpacity>
             <View style={styles.title}>
-                <Image source={require('../assets/doller.png')} style={styles.DollerImage} />
+                <Image source={require('../../../assets/doller.png')} style={styles.DollerImage} />
                 <Text style={styles.titletext}>
                     {props.title}
                 </Text>

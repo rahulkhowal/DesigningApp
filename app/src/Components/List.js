@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View, FlatList, Image, StyleSheet ,Dimensions} from 'react-native'
+import Images from '../common/Images'
 let deviceWidth = Dimensions.get('window').width
 let deviceHeight = Dimensions.get('window').height
 const List = (props) => {
@@ -13,7 +14,7 @@ const List = (props) => {
                 renderItem={({ item, index }) => (
                     <View key={item.id} style={styles.ListItem}>
                         <View style={styles.viewone}>
-                            <Image style={styles.imagestyle} source={props.title==='Deposit'?require('../assets/Up.png'):require('../assets/down.png')} />
+                            <Image style={styles.imagestyle} source={props.title==='Deposit'?Images.ListItem.uparrow:Images.ListItem.downarrow} />
                             <View style={styles.textView}>
                                 <Text style={styles.text}>
                                     {props.title}

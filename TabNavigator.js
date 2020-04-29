@@ -3,6 +3,7 @@ import {Text,Image,Dimensions,StyleSheet,Platform} from 'react-native'
 import Screenone from './app/src/Container/Screenone'
 import ScreenTwo from './app/src/Container/ScreenTwo'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Images from './app/src/common/Images'
 let deviceWidth = Dimensions.get('window').width
 let deviceHeight = Dimensions.get('window').height
 const Tab=createBottomTabNavigator()
@@ -31,8 +32,8 @@ const TabNavigator = () => {
                   tabBarLabel: '',
                   tabBarIcon: ({ focused }) => (
                     focused ?
-                    <Image style={styles.FocusedImage} source={require('./app/src/assets/block.png')} />:
-                    <Image style={styles.UnFocusedImage} source={require('./app/src/assets/block.png')} />
+                    <Image style={styles.FocusedImage} source={Images.TabIcons.firstIcon} />:
+                    <Image style={styles.UnFocusedImage} source={Images.TabIcons.firstIcon} />
                   ),
                 }}
                />
@@ -41,8 +42,8 @@ const TabNavigator = () => {
                 tabBarLabel: '',
                 tabBarIcon: ({ focused }) => (
                   (focused) ?
-                  <Image style={styles.FocusedImage} source={require('./app/src/assets/circle.png')} />:
-                  <Image style={styles.UnFocusedImage} source={require('./app/src/assets/circle.png')} />
+                  <Image style={styles.FocusedImage} source={Images.TabIcons.secondIcon} />:
+                  <Image style={styles.UnFocusedImage} source={Images.TabIcons.secondIcon} />
                 ),
               }}
               />
@@ -51,8 +52,8 @@ const TabNavigator = () => {
                 tabBarLabel: '',
                 tabBarIcon: ({ focused }) => (
                  (focused)?
-                    <Image style={styles.FocusedImage} source={require('./app/src/assets/list.png')} />:
-                    <Image style={styles.UnFocusedImage} source={require('./app/src/assets/list.png')} />
+                    <Image style={styles.FocusedImage} source={Images.TabIcons.thirdIcon} />:
+                    <Image style={styles.UnFocusedImage} source={Images.TabIcons.thirdIcon} />
                 ),
               }}
               />
@@ -61,8 +62,8 @@ const TabNavigator = () => {
                 tabBarLabel: '',
                 tabBarIcon: ({ focused }) => (
                   (focused) ?
-                  <Image style={styles.FocusedImage} source={require('./app/src/assets/person.png')} /> : 
-                  <Image style={styles.UnFocusedImage} source={require('./app/src/assets/person.png')}/>
+                  <Image style={styles.FocusedImage} source={Images.TabIcons.fourthIcon} /> : 
+                  <Image style={styles.UnFocusedImage} source={Images.TabIcons.fourthIcon}/>
                 ),
               }}
               />
